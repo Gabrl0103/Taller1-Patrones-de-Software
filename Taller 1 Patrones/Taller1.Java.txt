@@ -1,0 +1,25 @@
+public class TiendaDisfraces {
+    
+    private static TiendaDisfraces instance;
+    private int disfracesDisponibles;
+    
+
+    private TiendaDisfraces() {
+        disfracesDisponibles = 22;
+    }
+    
+    
+    public static TiendaDisfraces getInstance() {
+        if (instance == null) {
+            instance = new TiendaDisfraces();
+        }
+        return instance;
+    }
+    
+    public void prestarDisfraz() {
+        disfracesDisponibles--;
+        System.out.println("Disfraz prestado. Disponibles: " + disfracesDisponibles);
+    }
+}
+
+
